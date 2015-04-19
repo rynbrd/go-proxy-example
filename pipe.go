@@ -2,7 +2,6 @@ package main
 
 import (
 	"net"
-	"runtime"
 	"sync/atomic"
 )
 
@@ -36,7 +35,6 @@ func Pipe(a, b net.Conn) error {
 				return
 			}
 			logger.Debugf("copied %d bytes from %s to %s", n, r.RemoteAddr(), w.RemoteAddr())
-			runtime.Gosched()
 		}
 	}
 
