@@ -1,7 +1,6 @@
 package main
 
 import (
-	"io"
 	"net"
 	"sync"
 )
@@ -48,7 +47,7 @@ func (p *Proxy) handle(upConn net.Conn) {
 		return
 	}
 	defer downConn.Close()
-	if err := Pipe(upConn, downConn); err != nil && err != io.EOF {
+	if err := Pipe(upConn, downConn); err != nil {
 		logger.Errorf("pipe failed: %s", err)
 	} else {
 		logger.Infof("disconnected: %s", upConn.RemoteAddr())
