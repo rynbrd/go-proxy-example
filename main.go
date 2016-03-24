@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-        "github.com/BlueDragonX/go-log"
+	"github.com/BlueDragonX/go-log"
 	"os"
 	"os/signal"
 	"syscall"
