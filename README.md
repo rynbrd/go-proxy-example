@@ -3,6 +3,11 @@ Example TCP Proxy
 An example TCP proxy in Go. It listens on an address and proxies them to a
 single backend address.
 
+Build
+-----
+    go get github.com/BlueDragonX/go-log
+    go build
+
 Usage
 -----
 You need to specify a -listen and -backend option. For example:
