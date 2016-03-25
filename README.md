@@ -5,6 +5,11 @@ single backend address.
 
 Build
 -----
+If you have your GOPATH variable and directory structure set up correctly:
+    go get .
+    go build
+
+... and if not:
     go get github.com/BlueDragonX/go-log
     go build
 
